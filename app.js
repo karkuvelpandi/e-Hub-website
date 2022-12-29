@@ -29,20 +29,23 @@ mongoose.connect(mongo_url).then((response) => {
         console.log(err);
     })
 //API router
+app.get("/",(req,resp)=>{
+     resp.send("<h1>E-hub server is running successfully...</h1>")
+})
 app.use('/user', userRouter)
 app.use('/product', productRouter)
 
 //serving the frontend  for cyclic deployment
-app.use(express.static("./client/build"))
+// app.use(express.static("./client/build"))
 
-app.get("/", (req, resp) => {
-    resp.sendFile(
-       ( "./client/build/index.html"),
-        (err) => {
-            resp.status(500).send(err)
-        }
-    )
-})
+// app.get("/", (req, resp) => {
+//     resp.sendFile(
+//        ( "./client/build/index.html"),
+//         (err) => {
+//             resp.status(500).send(err)
+//         }
+//     )
+// })
 console.log('hello');
 app.listen(port, (err) => {
     if (err) throw err
