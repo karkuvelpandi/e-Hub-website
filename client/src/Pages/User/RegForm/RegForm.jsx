@@ -42,7 +42,7 @@ const RegForm = () => {
     let submit = validateFun(userDetails)
     if (submit === true) {
       console.log(submit);
-      let url = "http://localhost:8000/user/register"
+      let url = "/user/register"
       Axios.post(url, userDetails)
         .then((response) => {
           setSubmitted(true)

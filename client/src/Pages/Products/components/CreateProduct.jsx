@@ -22,7 +22,7 @@ const CreateProduct = () => {
 
     let submitHandler = (event) => {
         event.preventDefault();
-        let url ="http://127.12.22.32:8000/product/" 
+        let url ="/product/" 
         Axios.post(url, product).then((res) => {
             setSubmitted(true)
         }).catch(() => { }) 

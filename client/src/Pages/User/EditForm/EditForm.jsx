@@ -27,7 +27,7 @@ const EditForm = () => {
   })
 
   useEffect(() => {
-    Axios.get(`http://127.12.22.32:8000/user/${selectedId}`)
+    Axios.get(`/user/${selectedId}`)
       .then((response) => {
         setSelectedUser(response.data)
       })
@@ -45,7 +45,7 @@ const EditForm = () => {
    let flag = validateFun(selectedUser)
     console.log(flag);
    if(flag === (true)) {
-      let url = `http://localhost:8000/user/${selectedId}`
+      let url = `/user/${selectedId}`
       Axios.put(url, selectedUser)
         .then((response) => {
           setSubmitted(true)

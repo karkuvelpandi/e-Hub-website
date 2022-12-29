@@ -9,7 +9,7 @@ const Products = () => {
   let [err, setErr] = useState("")
 
   useEffect(() => {
-    Axios.get("http://127.12.22.32:8000/product/").then((res) => {
+    Axios.get("/product/").then((res) => {
       setProducts(res.data)
     }).catch((er) => { setErr(er) })
   }, [])
