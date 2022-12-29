@@ -29,7 +29,6 @@ mongoose.connect(mongo_url).then((response) => {
         console.log(err);
     })
 //API router
-
 app.use('/user', userRouter)
 app.use('/product', productRouter)
 
@@ -44,7 +43,7 @@ app.get("/", (req, resp) => {
         }
     )
 })
-
+console.log('hello');
 app.listen(port, (err) => {
     if (err) throw err
     console.log(`server running successfully on http://${hostName}:${port}`);
