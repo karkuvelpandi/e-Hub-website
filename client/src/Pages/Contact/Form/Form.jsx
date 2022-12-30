@@ -8,13 +8,15 @@ const Form = () => {
       <h3 className='h3-text'>Please complete the form and we will get back to you.</h3>
       </div>
       <div className="form-right">
-        <label className='label'>Name*</label><br />
+        <label className='label'>Name*</label>
         <input className='input' type="text" placeholder='Enter Your Name' /><br />
-        <label className='label'>Email*</label><br />
+        <label className='label'>Email*</label>
         <input className='input' type="text" placeholder='Enter Your Email' /><br />
-        <label className='label'>Mobile Number*</label><br />
-        <input className='input' type="text" placeholder='Enter Your Mobile Number' /><br /><br />
-        <button className='input btn'>Register Now</button>
+        <label className='label'>Mobile Number*</label>
+        <input className='input' type="text" placeholder='Enter Your Mobile Number' /><br />
+        <label className='label'>Message</label>
+        <textarea className='input textarea' name="message"  cols="50" rows="4" placeholder='Enter Message'></textarea><br />
+        <button className='input btn'>Contact Now</button>
       </div>
      </div>
   

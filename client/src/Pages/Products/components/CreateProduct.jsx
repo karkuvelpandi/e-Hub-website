@@ -48,8 +48,8 @@ const CreateProduct = () => {
             {
                 submitted ? <><Navigate to='/product' /></> : <>
                     <div className="row">
-                        <div className="col-md-12">
-                            <div className="card">
+                        <div className="col-md-5 m-auto">
+                            <div className="card ">
                                 <div className="card-header bg-dark text-white text-center"><h1>Create Product</h1></div>
                                 <div className="card-body bg-info">
                                     <form onSubmit={submitHandler}>

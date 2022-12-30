@@ -64,7 +64,7 @@ const Edit = () => {
             {
                 submitted ? <><Navigate to='/productAdmin' /></> : <>
                     <div className="row">
-                        <div className="col-md-5">
+                        <div className="col-md-5 m-auto">
                             <div className="card">
                                 <div className="card-header bg-dark text-white text-center"><h1>Edit Product</h1></div>
                                 <div className="card-body bg-secondary">

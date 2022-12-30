@@ -13,7 +13,13 @@
     min-height: 300px;
    
 }
+.card{
+    min-height: 460px;
+}
 .card1{
     max-width: 300px;
-    background:linear-gradient(rgba(255, 0, 0, 0.19),rgba(0, 0, 0, 0.255));
+    background:linear-gradient(rgb(255, 0, 0),rgb(0, 0, 0));
+}
+.card1:hover{
+     box-shadow: 5px 5px 10px,-5px -5px 10px;
 }
