@@ -2,7 +2,8 @@ import React from 'react'
 import './Form.css'
 import Axios from 'axios'
 import { useState } from 'react'
-
+import {Button, Modal, ModalHeader, ModalBody,ModalFooter } from "reactstrap"
+import success from '../../../assets/success.gif'
 const Form = () => {
   let [contact, setContact] = useState({
     name: "",
@@ -11,6 +12,9 @@ const Form = () => {
     message: ""
   })
   let [submitted, setSubmitted] = useState(false)
+const toggle=()=>{
+      setSubmitted(!submitted)
+}
 
   const getData = (e) => {
     setContact({ ...contact, [e.target.name]: e.target.value })
@@ -21,8 +25,6 @@ const Form = () => {
     let url = `https://good-gold-ray-cape.cyclic.app/contact/create`
     Axios.post(url, contact)
       .then((resp) => {
-        alert("Contact submitted successfully...")
-        console.log("Contact submitted successfully...")
         setSubmitted(true)
       })
       .catch(() => { })
@@ -34,7 +36,25 @@ const Form = () => {
         <h3 className='h3-text'>Please complete the form and we will get back to you.</h3>
       </div>
       {
-        submitted ? <><h1>Successful...!</h1></> : <>
+        submitted ? <><div>
+          <Modal isOpen={submitted}  className="detailCard" toggle={toggle}  >
+            <ModalHeader className='modelHead'>
+              <img src={success} className="modelHeadImg" alt="Success..." />
+            </ModalHeader>
+            <ModalBody className="modelBody">
+              <h1 >
+                   Success...
+              </h1> 
+            </ModalBody>
+            <ModalFooter className='modelFooter'>
+            <Button onClick={toggle}>OK</Button>
+            </ModalFooter>
+          </Modal>
+        </div>
+        </> : null
+      }
+      {
+        submitted ? <><h1 className='sucess'>Successful...!&#128522;<br /><br /><span className='sucess-span'>Thanks for your intrest we will get back to you soon</span></h1></> : <>
           <form onSubmit={submitHandler} className="form-right">
             <label className='label'>Name*</label>
             <input className='input' name='name' type="text" onChange={getData} placeholder='Enter Your Name' /><br />

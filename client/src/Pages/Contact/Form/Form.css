@@ -4,6 +4,7 @@
     margin: 5% 10%;
     display: flex;
     border-radius: 8px;
+    background-color: antiquewhite;
 }
 
 .form-left {
@@ -18,7 +19,24 @@
     border-right: 2px solid black;
     gap:1rem;
 }
-
+.sucess{
+    margin:5%;
+    margin-right: 0;
+    padding: 30px;
+    width: 50%;
+    height: 550px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap:1rem;
+    align-content: center;
+    text-align: center;
+    color: #68B984;
+}
+.sucess-span{
+    font-size: 1.5rem;
+}
 .form-right {
     width: 50%;
     display: flex;
@@ -50,8 +68,35 @@
     font-weight: 600;
     color: white;
 }
+.modelBtn{
+    font-size: 1rem;
+}
 .btn:hover{
     background-color: transparent;
     color:#1d2d60 ;
     box-shadow: 2px 2px 10px black;
+}
+
+.modelBody {
+    background: transparent;
+    text-align: center;
+    padding: 0;
+}
+.modelHead{
+    display: flex;
+    justify-content: center;
+    padding: 0;
+}
+.modelHeadImg{
+     max-height: 200px;
+     padding: 0;
+}
+.modelFooter{
+    padding: 0;
+}
+
+.detailCard {
+    margin-top: 150px;
+    padding: 0;
+    box-shadow: 10.5px 10.5px 7px black;
 }
