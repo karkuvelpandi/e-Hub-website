@@ -5,6 +5,7 @@ import mongoose from 'mongoose'
 import morgan from 'morgan'
 import userRouter from './router/userRouter.js'
 import productRouter from './router/productRouter.js'
+import contactRouter from './router/contactRouter.js'
 import path from 'path'
 
 const app = express()
@@ -34,6 +35,7 @@ app.get("/",(req,resp)=>{
 })
 app.use('/user', userRouter)
 app.use('/product', productRouter)
+app.use('/contact', contactRouter)
 
 //serving the frontend  for cyclic deployment
 // app.use(express.static("./client/build"))

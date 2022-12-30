@@ -2,7 +2,7 @@ import mongoose from "mongoose";
 
 let ContactSchema = mongoose.Schema
 
-let Schema = new ContactSchema({
+let schema = new ContactSchema({
     name : {
         type:String,
         required : true
@@ -14,5 +14,13 @@ let Schema = new ContactSchema({
     mobile : {
         type:Number,
         required : true
+    },
+    message : {
+        type : String,
+        required : false
     }
 })
+
+let Contact = mongoose.model('contact',schema)
+
+export default Contact
