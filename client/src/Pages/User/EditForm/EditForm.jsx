@@ -45,7 +45,7 @@ const EditForm = () => {
    let flag = validateFun(selectedUser)
     console.log(flag);
    if(flag === (true)) {
-      let url = `https://good-gold-ray-cape.cyclic.app/user/${selectedId}`
+      let url = `https://cute-hare-attire.cyclic.app/user/${selectedId}`
       Axios.put(url, selectedUser)
         .then((response) => {
           setSubmitted(true)

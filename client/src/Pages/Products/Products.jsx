@@ -10,7 +10,7 @@ const Products = () => {
   let [err, setErr] = useState("")
 
   useEffect(() => {
-    Axios.get("https://good-gold-ray-cape.cyclic.app/product/").then((res) => {
+    Axios.get("https://cute-hare-attire.cyclic.app/product/").then((res) => {
       setProducts(res.data)
     }).catch((er) => { setErr(er) })
   }, [])

@@ -10,7 +10,7 @@ const UserAdmin = () => {
         fetchData()
     }, [])
     let fetchData = () => {
-        Axios.get("https://good-gold-ray-cape.cyclic.app/user/")
+        Axios.get("https://cute-hare-attire.cyclic.app/user/")
             .then((response) => {
                 setUsers(response.data)
             })
@@ -20,7 +20,7 @@ const UserAdmin = () => {
     }
 
     let deleteHandler = (userId) => {
-        let url = `https://good-gold-ray-cape.cyclic.app/user/${userId}`
+        let url = `https://cute-hare-attire.cyclic.app/user/${userId}`
         Axios.delete(url)
             .then(() => {
                 console.log("User detail deleted successfully...");

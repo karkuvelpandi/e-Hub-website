@@ -22,7 +22,7 @@ const toggle=()=>{
 
   const submitHandler = (e) => {
     e.preventDefault()
-    let url = `https://good-gold-ray-cape.cyclic.app/contact/create`
+    let url = `https://cute-hare-attire.cyclic.app/contact/create`
     Axios.post(url, contact)
       .then((resp) => {
         setSubmitted(true)

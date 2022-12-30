@@ -19,7 +19,7 @@ const Edit = () => {
         setProductId(id)
     };
     useEffect(() => {
-        let url = `https://good-gold-ray-cape.cyclic.app/product/${productID}`
+        let url = `https://cute-hare-attire.cyclic.app/product/${productID}`
         Axios.get(url).then((response) => {
             setSelectedProduct(response.data)
         }).catch((err) => { setErrorMsg(err) })
@@ -49,7 +49,7 @@ const Edit = () => {
 
     let submitHandler = (event) => {
         event.preventDefault();
-        let dataURL = `https://good-gold-ray-cape.cyclic.app/product/${productID}`
+        let dataURL = `https://cute-hare-attire.cyclic.app/product/${productID}`
         Axios.put(dataURL, selectedproduct).then((res) => {
 
             setSubmitted(true)

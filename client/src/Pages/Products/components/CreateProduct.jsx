@@ -22,7 +22,7 @@ const CreateProduct = () => {
 
     let submitHandler = (event) => {
         event.preventDefault();
-        let url ="https://good-gold-ray-cape.cyclic.app/product/create" 
+        let url ="https://cute-hare-attire.cyclic.app/product/create" 
         Axios.post(url, product).then((res) => {
             setSubmitted(true)
             console.log(url)

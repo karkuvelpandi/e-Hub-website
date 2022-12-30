@@ -27,7 +27,7 @@ const LogIn = () => {
     setValid(true)
     let submit = validateFun(userDetails)
     if (submit === true) {
-      let url = "https://good-gold-ray-cape.cyclic.app/user/login"
+      let url = "https://cute-hare-attire.cyclic.app/user/login"
       Axios.post(url, userDetails).then((resp) => {
         setSubmitted(true)
         console.log(resp.data);

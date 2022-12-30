@@ -10,14 +10,14 @@ const ProductAdmin = () => {
    let[errorMsg,setErrorMsg]=useState("")
 
   useEffect(() => {
-    Axios.get("https://good-gold-ray-cape.cyclic.app/product/").then((res) => {
+    Axios.get("https://cute-hare-attire.cyclic.app/product/").then((res) => {
       setProducts(res.data)
     }).catch((err) => { setErrorMsg(err)})
   }, [])
 
   
   let deleteProduct = (id) => {
-    Axios.delete(`https://good-gold-ray-cape.cyclic.app/product/${id}`)
+    Axios.delete(`https://cute-hare-attire.cyclic.app/product/${id}`)
       .then((resp) => {
         navigate(0)
       }).catch((err) => { setErrorMsg(err)})

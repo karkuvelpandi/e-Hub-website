@@ -42,7 +42,7 @@ const RegForm = () => {
     let submit = validateFun(userDetails)
     if (submit === true) {
       console.log(submit);
-      let url = "https://good-gold-ray-cape.cyclic.app/user/register"
+      let url = "https://cute-hare-attire.cyclic.app/user/register"
       Axios.post(url, userDetails)
         .then((response) => {
           setSubmitted(true)
