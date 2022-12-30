@@ -30,6 +30,10 @@
     border-radius: 4px;
     font-size: 1rem;
     padding:  0 1rem;
+    border:2px solid black;
+}
+.input:focus{
+    box-shadow: 5px 5px 5px black;
 }
 .textarea{
     padding: 1rem;
