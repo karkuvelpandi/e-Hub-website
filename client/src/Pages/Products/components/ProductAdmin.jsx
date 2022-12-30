@@ -24,9 +24,7 @@ const ProductAdmin = () => {
   };
   return (
     <>
-      <div className="container mt-5">
-        <pre>{JSON.stringify(products)}</pre>
-
+      <div className="container">
         <div className="row">
           <div className="col-8">
             <table className='table table-hover mt-5'>
@@ -53,7 +51,6 @@ const ProductAdmin = () => {
                           <td><img height='80pc' width='70pc' src={product.image} alt="" /></td>
                           <td><Link to={`/updateProduct/${product._id}`} className='btn btn-success'>Edit</Link >&nbsp;
                             <Link className='btn btn-danger' onClick={deleteProduct.bind(this, product._id)}>Delete</Link ></td>
-
                         </tr>
 
                       })

@@ -17,16 +17,16 @@ import EditForm from './Pages/User/EditForm/EditForm'
 const App = () => {
   return <>
     < Router>
-      <Navbar />
+      <Navbar/>
       <Routes>
-        <Route path='/' element={<Home />} />
+        <Route path='/' element={<Home/>} />
         {/* <Route path='/service' element={<Service />} /> */}
         <Route path='/contact' element={<Contact />} />
 
         <Route path='/product' element={<Products />} />
         <Route path='/createProduct' element={<CreateProduct />} />
         <Route path='/productAdmin' element={<ProductAdmin />} />
-        <Route path='/updateProduct' element={<UpdateProduct />} />
+        <Route path='/updateProduct/:id' element={<UpdateProduct />} />
 
         <Route path='/userLogin' element={<LogIn/>} />
         <Route path='/regForm' element={<RegForm />} />

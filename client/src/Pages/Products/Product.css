@@ -6,7 +6,6 @@
 .container{
     max-width: 1200px;
     min-height: 600px;
-    border:2px solid black;
     margin:1rem auto;
 }
 .col-md-3{
@@ -14,7 +13,7 @@
     min-height: 300px;
    
 }
-.card{
+.card1{
     max-width: 300px;
-    min-height: 300px;
+    background:linear-gradient(rgba(255, 0, 0, 0.19),rgba(0, 0, 0, 0.255));
 }

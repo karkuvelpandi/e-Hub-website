@@ -3,6 +3,7 @@ import { useEffect } from 'react'
 import { useState } from 'react'
 import Axios from 'axios'
 import Footer from '../../Footer/Footer'
+import './Product.css'
 const Products = () => {
 
   let [products, setProducts] = useState([])
@@ -15,15 +16,16 @@ const Products = () => {
   }, [])
 
   return <> 
-    <div className="container" style={{minHeight:"50vh"}}>
-      <pre>{JSON.stringify(products)}</pre>
+
+    <div className="container mt-1" style={{minHeight:"50vh"}}>
+      {/* <pre>{JSON.stringify(products)}</pre> */}
       <div className="row">
         {
           products.length > 0 ? <>
             {
               products.map((product) => {
                 return <div className="col-md-3">
-                  <div className="card mt-5">
+                  <div className="card card1 mt-5">
                     <div className="card-header"><center><img src={product.image} width='130pc' height='170pc' alt="" /></center></div>
                     <div className="card-body">
                       <ul className="list-group">

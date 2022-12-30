@@ -10,11 +10,11 @@ export const MenuItems = {
         path: '/productAdmin',
         cName: 'dropdown-link'
     },
-    {
-        title: 'Update Product',
-        path: '/updateProduct',
-        cName: 'dropdown-link'
-    },
+    // {
+    //     title: 'Update Product',
+    //     path: '/updateProduct',
+    //     cName: 'dropdown-link'
+    // },
   ],
 user:[
     {
@@ -27,11 +27,11 @@ user:[
         path: '/userAdmin',
         cName: 'dropdown-link'
     },
-    {
-        title: 'Update Profile',
-        path: '/editForm',
-        cName: 'dropdown-link'
-    }
+    // {
+    //     title: 'Update Profile',
+    //     path: '/editForm',
+    //     cName: 'dropdown-link'
+    // }
 ]
 
 }

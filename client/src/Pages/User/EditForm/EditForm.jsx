@@ -156,7 +156,7 @@ const EditForm = () => {
 
   return <>
     
-<pre>{JSON.stringify(selectedUser)}</pre>
+{/* <pre>{JSON.stringify(selectedUser)}</pre> */}
     <div className="container container1 mt-5">
       <div className="row">
         <div className="col-md-12 col-bg">
