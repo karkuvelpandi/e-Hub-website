@@ -14,12 +14,19 @@
    
 }
 .card{
-    min-height: 460px;
+    min-height: 400px;
 }
 .card1{
     max-width: 300px;
-    background:linear-gradient(rgb(255, 0, 0),rgb(0, 0, 0));
+    background:white;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    box-shadow: 5px 5px 10px,-5px -5px 10px;
+    transition: all 0.3s ease;
+
 }
 .card1:hover{
-     box-shadow: 5px 5px 10px,-5px -5px 10px;
+     transform: translateY(-1rem); 
 }
