@@ -1,6 +1,6 @@
 .footer-bg{
-    background-color: #d2d2d2;
-     
+    background-color: #000000;
+     color: antiquewhite;
 }
 .footer{
  display: flex;
@@ -47,6 +47,7 @@
     text-decoration: none;
 }
 .copyRight{
+    border-top: 1px solid white;
     background-color: black;
     padding: 1% 10%;
     color: #7a755c;
