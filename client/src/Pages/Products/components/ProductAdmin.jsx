@@ -26,7 +26,7 @@ const ProductAdmin = () => {
     <>
       <div className="container">
         <div className="row">
-          <div className="col-8">
+          <div className="col-md-12">
             <table className='table table-hover mt-5'>
               <thead className='bg-dark text-white'>
                 <tr>

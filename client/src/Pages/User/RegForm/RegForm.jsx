@@ -86,7 +86,7 @@ const RegForm = () => {
       setMobileErr("please enter Mobile Number")
     }
     else if (mobile.length !== 10) {
-      setMobileErr("please enter min 4 and max 10 character only")
+      setMobileErr("please enter 10 Numbers")
     }
     else if (mobile.length === 10) {
       setMobileErr("")

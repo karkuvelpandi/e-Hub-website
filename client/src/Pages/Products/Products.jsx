@@ -26,12 +26,11 @@ const Products = () => {
               products.map((product) => {
                 return <div className="col-md-3">
                   <div className="card card1 mt-5">
-                   <center><img src={product.image} width='130px' height='170px' alt="" /></center>
-                    
+                   <center><img src={product.image} className="productImg" alt="" /></center>  
                       <ul className="list-group">
                         <li className="list-group-item"><b> Name : </b>{product.name}</li>
-                        <li className="list-group-item"><b> Price : </b>{product.price}</li>
-                        {/* <li className="list-group-item"><b> QTY : </b>{product.qty}</li> */}
+                        <li className="list-group-item"><b> Price : &#8377; </b>{product.price}</li>
+                        <li className="list-group-item"><b> Stock Available : </b>{product.qty}</li>
                         <li className="list-group-item"><b> Info : </b>{product.info}</li>
                       </ul>
                    
