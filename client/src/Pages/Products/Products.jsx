@@ -31,7 +31,7 @@ const Products = () => {
                       <ul className="list-group">
                         <li className="list-group-item"><b> Name : </b>{product.name}</li>
                         <li className="list-group-item"><b> Price : </b>{product.price}</li>
-                        <li className="list-group-item"><b> QTY : </b>{product.qty}</li>
+                        {/* <li className="list-group-item"><b> QTY : </b>{product.qty}</li> */}
                         <li className="list-group-item"><b> Info : </b>{product.info}</li>
                       </ul>
                    
