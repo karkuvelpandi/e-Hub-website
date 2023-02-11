@@ -5,11 +5,11 @@ let userSchema=mongoose.Schema
 let schema=new userSchema({
     name:{
         type:String,
-        requird:true
+        required:true
     },
     mobile:{
         type:Number,
-        requird:true
+        required:true
     },
     email:{
         type:String,
