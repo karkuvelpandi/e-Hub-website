@@ -13,7 +13,7 @@ method         : GET
 required field : N/A
 */
 router.get('/', async (req, resp) => {
-   let user = await User.find()
+   let user = await User.find({})
    resp.status(200).json(user)
 })
 
@@ -98,10 +98,10 @@ router.delete('/:id', async (req, resp) => {
    try {
       let user = await User.findById(user_Id)
       if (!user) {
-         return resp.status(404).json({ msg: "Product not found...!" })
+         return resp.status(404).json({ msg: "User not found...!" })
       }
       user = await User.findByIdAndDelete(user_Id)
-      resp.status(200).json({ msg: 'Product deleted successfully...!' })
+      resp.status(200).json({ msg: 'User deleted successfully...!' })
    }
    catch (err) { }
 })

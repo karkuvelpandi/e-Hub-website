@@ -15,25 +15,25 @@ const Products = () => {
     }).catch((er) => { setErr(er) })
   }, [])
 
-  return <> 
+  return <>
 
-    <div className="container mt-1" style={{minHeight:"50vh"}}>
+    <div className="container mt-1 relative -top-[200px] z-20" style={{ minHeight: "50vh" }}>
       {/* <pre>{JSON.stringify(products)}</pre> */}
       <div className="row">
         {
           products.length > 0 ? <>
             {
               products.map((product) => {
-                return <div className="col-md-3">
+                return <div className="col-md-3 cursor-pointer">
                   <div className="card card1 mt-5">
-                   <center><img src={product.image} className="productImg" alt="" /></center>  
-                      <ul className="list-group">
-                        <li className="list-group-item"><b> Name : </b>{product.name}</li>
-                        <li className="list-group-item"><b> Price : &#8377; </b>{product.price}</li>
-                        <li className="list-group-item"><b> Stock Available : </b>{product.qty}</li>
-                        <li className="list-group-item"><b> Info : </b>{product.info}</li>
-                      </ul>
-                   
+                    <center><img src={product.image} className="productImg" alt="" /></center>
+                    <ul className="list-group">
+                      <li className="list-group-item"><b> Name : </b>{product.name}</li>
+                      <li className="list-group-item"><b> Price : &#8377; </b>{product.price}</li>
+                      <li className="list-group-item"><b> Stock Available : </b>{product.qty}</li>
+                      <li className="list-group-item"><b> Info : </b>{product.info}</li>
+                    </ul>
+
                   </div>
                 </div>
               })
@@ -42,7 +42,7 @@ const Products = () => {
         }
       </div>
     </div>
-    <Footer/>
+    <Footer />
   </>
 }
 
