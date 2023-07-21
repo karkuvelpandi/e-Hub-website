@@ -36,7 +36,7 @@ const Header = () => {
       ))
    }
    return <>
-      <div className='relative h-[461px]'>
+      <div className='relative'>
          <Slider dots arrow dotColor='blue' sliderClass="" dotContainerClass='flex gap-10 absolute top-1/2 left-1/2'>
             {imageChild()}
          </Slider>
