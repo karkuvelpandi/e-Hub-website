@@ -17,9 +17,9 @@ const Products = () => {
 
   return <>
 
-    <div className="container mt-1 relative -top-[200px] z-20" style={{ minHeight: "50vh" }}>
+    <div className="container mt-1 flex flex-1 md:relative md:bottom-56 md:z-20" style={{ minHeight: "50vh" }}>
       {/* <pre>{JSON.stringify(products)}</pre> */}
-      <div className="row">
+      <div className="row flex justify-center">
         {
           products.length > 0 ? <>
             {

@@ -1,6 +1,5 @@
-import React, { useState, useEffect } from 'react'
+import React from 'react'
 import './Header.css'
-import logo2 from '../../../assets/header-img.png'
 import { Slider } from '../../../components/Slider/Slider'
 import slider1 from "../../../assets/Slider/slider1.jpg"
 import slider2 from "../../../assets/Slider/slider2.jpg"
