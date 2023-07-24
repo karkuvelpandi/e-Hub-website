@@ -2,9 +2,9 @@ import React from 'react'
 import { useEffect } from 'react'
 import { useState } from 'react'
 import Axios from 'axios'
-import Footer from '../../Footer/Footer'
+import Footer from '../../components/Footer/Footer'
 import './Product.css'
-const Products = () => {
+const Products = ({ context = "" }) => {
 
   let [products, setProducts] = useState([])
   let [err, setErr] = useState("")
@@ -17,14 +17,16 @@ const Products = () => {
 
   return <>
 
-    <div className="container mt-1 flex flex-1 md:relative md:bottom-56 md:z-20" style={{ minHeight: "50vh" }}>
+    <div className={`container mt-1 flex flex-1 
+    ${context === "Home" && "md:relative md:bottom-56 md:z-20"}
+    ` } style={{ minHeight: "50vh" }}>
       {/* <pre>{JSON.stringify(products)}</pre> */}
       <div className="row flex justify-center">
         {
           products.length > 0 ? <>
             {
-              products.map((product) => {
-                return <div className="col-md-3 cursor-pointer">
+              products.map((product, index) => {
+                return <div key={index} className="col-md-3 cursor-pointer">
                   <div className="card card1 mt-5">
                     <center><img src={product.image} className="productImg" alt="" /></center>
                     <ul className="list-group">

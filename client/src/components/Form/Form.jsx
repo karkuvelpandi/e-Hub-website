@@ -2,8 +2,8 @@ import React from 'react'
 import './Form.css'
 import Axios from 'axios'
 import { useState } from 'react'
-import {Button, Modal, ModalHeader, ModalBody,ModalFooter } from "reactstrap"
-import success from '../../../assets/success.gif'
+import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from "reactstrap"
+import success from '../../assets/success.gif'
 const Form = () => {
   let [contact, setContact] = useState({
     name: "",
@@ -12,9 +12,9 @@ const Form = () => {
     message: ""
   })
   let [submitted, setSubmitted] = useState(false)
-const toggle=()=>{
-      setSubmitted(!submitted)
-}
+  const toggle = () => {
+    setSubmitted(!submitted)
+  }
 
   const getData = (e) => {
     setContact({ ...contact, [e.target.name]: e.target.value })
@@ -37,17 +37,17 @@ const toggle=()=>{
       </div>
       {
         submitted ? <><div>
-          <Modal isOpen={submitted}  className="detailCard" toggle={toggle}  >
+          <Modal isOpen={submitted} className="detailCard" toggle={toggle}  >
             <ModalHeader className='modelHead'>
               <img src={success} className="modelHeadImg" alt="Success..." />
             </ModalHeader>
             <ModalBody className="modelBody">
               <h1 >
-                   Success...
-              </h1> 
+                Success...
+              </h1>
             </ModalBody>
             <ModalFooter className='modelFooter'>
-            <Button onClick={toggle}>OK</Button>
+              <Button onClick={toggle}>OK</Button>
             </ModalFooter>
           </Modal>
         </div>

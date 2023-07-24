@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
-import homeLogo from '../assets/logo.png'
+import homeLogo from '../../assets/logo.png'
 import './Navbar.css'
 import Dropdown from './DropDown/Dropdown'
 import { MenuItems } from './DropDown/MenuItems'

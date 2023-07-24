@@ -1,9 +1,9 @@
 import React from 'react'
 import './Header.css'
-import { Slider } from '../../../components/Slider/Slider'
-import slider1 from "../../../assets/Slider/slider1.jpg"
-import slider2 from "../../../assets/Slider/slider2.jpg"
-import slider3 from "../../../assets/Slider/slider3.jpg"
+import { Slider } from '../../components/Slider/Slider'
+import slider1 from "../../assets/Slider/slider1.jpg"
+import slider2 from "../../assets/Slider/slider2.jpg"
+import slider3 from "../../assets/Slider/slider3.jpg"
 const Header = () => {
    const imageArray = [slider1, slider2, slider3]
    // const [imagesLoaded, setImagesLoaded] = useState(false);
@@ -28,7 +28,7 @@ const Header = () => {
    // }, []);
    const imageChild = () => {
       return imageArray.map((img, index) => (
-         <div>
+         <div key={index}>
             <img key={index} src={img} alt="" />
             <div className=" bg-gradient-to-b from-transparent to-white absolute inset-0" />
          </div>

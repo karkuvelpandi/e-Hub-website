@@ -1,12 +1,13 @@
-.header{
+.header {
     background-color: #000;
     position: relative;
-    height:800px;
+    height: 800px;
     display: flex;
     align-items: flex-end;
 
 }
-.header::before{
+
+.header::before {
     content: '';
     display: block;
     position: absolute;
@@ -16,11 +17,11 @@
     height: 100%;
     z-index: 0;
     opacity: 0.5;
-    background-image: url("../../../assets/header-bg.png");
+    background-image: url("../../assets/header-bg.png");
     background-size: cover;
 }
 
-.header-content{
+.header-content {
     position: relative;
     width: 100%;
     color: whitesmoke;
@@ -28,6 +29,7 @@
     margin-left: 220px;
     margin-bottom: 50px;
 }
-.header-img{
+
+.header-img {
     height: 200px;
 }
