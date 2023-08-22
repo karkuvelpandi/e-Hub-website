@@ -40,7 +40,7 @@ app.use("/product", productRouter);
 app.use("/contact", contactRouter);
 
 // This Api is for Contact app not for E-hub
-app.use("/contactApp", contactAppRouter);
+app.use("/contact-app", contactAppRouter);
 
 //serving the frontend  for cyclic deployment
 // app.use(express.static("./client/build"))

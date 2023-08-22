@@ -8,7 +8,7 @@ dotenv.config({ path: "../config/config.env" });
 const router = express.Router();
 //get all Contacts
 /*
-URL            : http://127.12.22.32:8000/contactApp/
+URL            : http://127.12.22.32:8000/contact-app/
 method         : GET
 required field : N/A
 */
@@ -19,7 +19,7 @@ router.get("/", async (req, resp) => {
 
 //Add user  / creating ContactApp data
 /*
-URL            : http://127.12.22.32:8000/contactApp/create
+URL            : http://127.12.22.32:8000/contact-app/create
 method         : POST
 required field : id, firstName, lastName, email, status,image
 */
@@ -47,7 +47,7 @@ router.post("/create", async (req, resp) => {
 });
 // Updating Contact data
 /*
-URL            : http://127.12.22.32:8000/contactApp/:id
+URL            : http://127.12.22.32:8000/contact-app/:id
 method         : PUT
 required field : id, firstName, lastName, email, status,image
 */
@@ -80,7 +80,7 @@ router.put("/:id", async (req, resp) => {
 
 // Deleting contact data
 /*
-URL            : http://127.12.22.32:8000/ContactApp/:id
+URL            : http://127.12.22.32:8000/contact-app/:id
 method         : DELETED
 required field : N/A
 */
@@ -98,7 +98,7 @@ router.delete("/:id", async (req, resp) => {
 
 //Get single contact
 /*
-URL            : http://127.12.22.32:8000/ContactApp/:id
+URL            : http://127.12.22.32:8000/contact-app/:id
 method         : GET
 required field : N/A
 */
