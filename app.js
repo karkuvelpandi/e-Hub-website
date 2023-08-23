@@ -7,7 +7,6 @@ import userRouter from "./router/userRouter.js";
 import productRouter from "./router/productRouter.js";
 import contactRouter from "./router/contactRouter.js";
 import contactAppRouter from "./router/contactAppRouter.js";
-const bodyParser = require("body-parser");
 
 const app = express();
 //config env
