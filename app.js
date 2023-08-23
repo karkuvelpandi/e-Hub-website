@@ -7,6 +7,7 @@ import userRouter from "./router/userRouter.js";
 import productRouter from "./router/productRouter.js";
 import contactRouter from "./router/contactRouter.js";
 import contactAppRouter from "./router/contactAppRouter.js";
+const bodyParser = require("body-parser");
 
 const app = express();
 //config env
@@ -19,8 +20,8 @@ app.use(cors());
 //http logger
 app.use(morgan("tiny"));
 //reading form data
-app.use(express.json());
-app.use(express.urlencoded({ extended: false }));
+app.use(express.json({ limit: "50mb" }));
+app.use(express.urlencoded({ limit: "50mb", extended: false }));
 //connecting mongoDB
 mongoose.set("strictQuery", false);
 mongoose
