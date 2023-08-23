@@ -25,7 +25,6 @@ let schema = new contactApp({
   },
   image: {
     type: String,
-    required: false,
   },
 });
 
