@@ -20,8 +20,8 @@ app.use(cors());
 //http logger
 app.use(morgan("tiny"));
 //reading form data
-app.use(express.json({ limit: "50mb" }));
-app.use(express.urlencoded({ limit: "50mb", extended: false }));
+app.use(express.json());
+app.use(express.urlencoded({ extended: false }));
 //connecting mongoDB
 mongoose.set("strictQuery", false);
 mongoose
