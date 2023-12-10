@@ -45,23 +45,37 @@ app.use("/contact", contactRouter);
 // This Api is for Contact app not for E-hub
 app.use("/contact-app", contactAppRouter);
 
-//serving the frontend  for cyclic deployment
-// app.use(express.static("./client/build"))
+// *********************************************************************
+// Separate app Toll Calculator
+// TollGuru API Key
+const xApiKay = "8b8pDP74r74JBqMmqd33MdHNqPr3jbJ3";
+app.post("/toll-guru-api", async (req, resp) => {
+  try {
+    console.log(req.body);
+    const response = await fetch(
+      "https://apis.tollguru.com/toll/v2/origin-destination-waypoints",
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          "x-api-key": xApiKay,
+        },
+        body: JSON.stringify(req.body),
+      }
+    );
+    const data = await response.json();
+    console.log(data);
+    resp.status(200).json({
+      result: "Data Successfully fetched...",
+      tollData: data,
+    });
+  } catch (err) {
+    console.log(err);
+  }
+});
+//************************************************************************** */
 
-// app.get("/", (req, resp) => {
-//     resp.sendFile(
-//        ( "./client/build/index.html"),
-//         (err) => {
-//             resp.status(500).send(err)
-//         }
-//     )
-// })
-console.log("hello");
 app.listen(port, (err) => {
   if (err) throw err;
   console.log(`server running successfully on http://${hostName}:${port}`);
 });
-
-// commit1
-
-// commit2
