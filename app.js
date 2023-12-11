@@ -48,7 +48,8 @@ app.use("/contact-app", contactAppRouter);
 // *********************************************************************
 // Separate app Toll Calculator
 // TollGuru API Key
-const xApiKay = "8b8pDP74r74JBqMmqd33MdHNqPr3jbJ3";
+// const xApiKay = "8b8pDP74r74JBqMmqd33MdHNqPr3jbJ3";
+const xApiKay = "NqNBrh7FbL8Br97qTnNQMR8TdggfTGQg";
 app.post("/toll-guru-api", async (req, resp) => {
   try {
     console.log(req.body);
