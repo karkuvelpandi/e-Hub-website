@@ -1,19 +1,26 @@
 import jwt from "jsonwebtoken";
-// JWT Token verifification
-let authenticate = (request, response, next) => {
-  if (!request.headers.authorization) {
-    return response.status(401).send("Unauthorized Request");
+
+const authenticate = (req, res, next) => {
+  const authHeader = req.headers.authorization;
+  if (!authHeader) {
+    return res.status(401).json({ error: "Authorization header missing" });
   }
-  let token = request.headers.authorization.split(" ")[1];
-  console.log(token);
-  if (token === null) {
-    return response.status(401).send("Unauthorized Request");
+
+  const token = authHeader.split(" ")[1];
+  if (!token) {
+    return res.status(401).json({ error: "Token missing" });
   }
-  let payload = jwt.verify(token, process.env.JWT_SECRET_KEY);
-  if (!payload) {
-    return response.status(401).send("Unauthorized Request");
+
+  try {
+    const payload = jwt.verify(token, process.env.JWT_SECRET_KEY);
+    req.user = payload.user; // Add user data to request
+    next(); // Proceed to the next middleware/route handler
+  } catch (err) {
+    if (err.name === "TokenExpiredError") {
+      return res.status(401).json({ error: "Token expired" });
+    }
+    return res.status(401).json({ error: "Invalid token" });
   }
-  request.user = payload.user;
-  next();
 };
-export default authenticate
+
+export default authenticate;

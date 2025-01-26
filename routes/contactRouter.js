@@ -1,5 +1,5 @@
 import express from 'express'
-import Contact from '../model/Contact.js'
+import Contact from '../schema/Contact.js'
 
 let router = express.Router()
 //Get all contacts

@@ -1,5 +1,5 @@
 import express from 'express'
-import Product from '../model/Product.js'
+import Product from '../schema/Product.js'
 
 let router = express.Router()
 //Get all products

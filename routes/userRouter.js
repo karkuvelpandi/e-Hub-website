@@ -1,5 +1,5 @@
 import express from 'express'
-import User from '../model/User.js'
+import User from '../schema/User.js'
 import authenticate from "../middleware/authenticate.js";
 import jwt from 'jsonwebtoken'
 import bcrypt from 'bcrypt'
